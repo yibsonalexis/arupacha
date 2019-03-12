@@ -16,90 +16,66 @@ import Grid from "@material-ui/core/Grid";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "none", background: "red" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "green" }}
+        onClick={onClick}
+      />
+    );
+  }
 
 export default class SimpleSlider extends Component {
 
     render() {
+        console.log(window.screen.height + ' ' + window.screen.availHeight);
+        const heightScreem = (window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight)
+
         const settings = {
             dots: true,
             infinite: true,
             speed: 500,
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            nextArrow: <SampleNextArrow />,
+            prevArrow: <SamplePrevArrow />
         };
 
         const styles = {
-            gridContainer: {
-                marginRight: "-15px",
-                marginLeft: "-15px",
-                width: "auto",
-                height:'100px',
-            },
-            gridItem: {
-                position: "relative",
-                width: "100%",
-                minHeight: "1px",
-                paddingRight: "15px",
-                paddingLeft: "15px",
-                flexBasis: "auto",
-                marginLeft: "auto !important",
-                marginRight: "auto !important"
-            },
-            card: {
-                maxWidth: 345,
-            },
-            media: {
-                height: 800,
-            },
-            section: {
-                padding: "70px 0"
-            },
-            container: {
-                // paddingRight: "15px",
-                // paddingLeft: "15px",
-                marginRight: "auto",
-                marginLeft: "auto",
-                width: "100%",
-                "@media (min-width: 576px)": {
-                    maxWidth: "540px"
-                },
-                "@media (min-width: 768px)": {
-                    maxWidth: "720px"
-                },
-                "@media (min-width: 992px)": {
-                    maxWidth: "960px"
-                },
-                "@media (min-width: 1200px)": {
-                    maxWidth: "1140px"
-                }
 
-            },
-            marginAuto: {
-                marginLeft: "auto !important",
-                marginRight: "auto !important"
-            }
         };
 
         return (
             <div>
-{/* 
-                <Slider {...settings}>
-                    <div >
-                        <img src={image1} />
-                    </div>
-                    <div>
-                    <img src={image2} />
-                    </div>
-                    <div>
-                    <img src={image3} />
-                    </div>
-                    </Slider> */}
 
-                    <Card style={styles.container}>
-                        <CardActionArea style={styles.media}>
-                        <img src={image3} style={{width:'100%'}}/>
-                        </CardActionArea>
-                    </Card>
+                <Carousel {...settings}>
+                    <div style={styles.container}>
+                        <img src={image1} style={{width:'100%', minWidth:'1080px', height:heightScreem+'px'}}/>
+                    </div>
+                    <div style={styles.container}>
+                        <img src={image2} style={{width:'100%', minWidth:'1080px', height:heightScreem+'px'}}/>
+                    </div>
+                    <div style={styles.container}>
+                        <img src={image3} style={{width:'100%', minWidth:'1080px', height:heightScreem+'px'}}/>
+                    </div>
+                </Carousel>
+
+                    
                 </div>
         );
     }

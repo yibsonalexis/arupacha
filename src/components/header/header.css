@@ -60,3 +60,7 @@ nav a:focus {
 .cl-effect-6 a:hover::after {
 	height: 100%;
 } 
+
+.transparente{
+	background-color: transparent !important;
+	}
