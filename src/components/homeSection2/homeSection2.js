@@ -3,9 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import "./homeSection2.css";
 import Fab from "@material-ui/core/Fab";
 import Icon from "@material-ui/core/Icon";
-import image1 from "../../assets/imgs/bg2.jpg";
 import image2 from "../../assets/imgs/bg3.jpg";
-import image3 from "../../assets/imgs/bg7.jpg";
 
 export const HomeSection2 = props => {
   return (
