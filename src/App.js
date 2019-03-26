@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/header/header'
-import SimpleSlider from './components/body/body'
+import { Home } from './screens/home'
 
 
 class App extends Component {
   render() {
     return (
       <div>
-      <Header>
-
-      </Header>
-      
-      <SimpleSlider>
-      </SimpleSlider>
-
+        <Header />
+        
+        <Home />
 
       </div>
     );
