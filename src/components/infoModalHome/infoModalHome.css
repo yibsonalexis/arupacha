@@ -1,0 +1,8 @@
+.infoModalHome {
+    padding: 20px;
+    text-align: justify;
+    color: #5a5a5a;
+}
+.infoModalHome h1, h2 {
+    text-align: center;
+}

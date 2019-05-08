@@ -4,11 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-
 import Grid from '@material-ui/core/Grid';
-
-
-
 import './header.css'
 import { SocialButton } from '../socialButton/socialButton';
 
@@ -22,17 +18,15 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       display: 'flex',
     },
-
   },
 });
 
 
 function Header(props) {
   const { classes } = props;
-
   return (
     <div>
-      <AppBar className="transparente" style={{ height: '100px' }}>
+      <AppBar className="transparente" position="absolute" style={{ height: '100px' }}>
         <Toolbar className={classes.root}>
           <Grid
             container
@@ -47,13 +41,12 @@ function Header(props) {
             <section className="color-1">
               <nav className="cl-effect-6">
                 <a href="/">Inicio</a>
-                <a href="/inicio">Servicios</a>
-                <a href="/inicio">Visitanos</a>
-                <a href="/inicio">Galería</a>
-                <a href="/inicio">Contátenos</a>
+                <a href="/">Servicios</a>
+                <a href="/">Visitanos</a>
+                <a href="/">Galería</a>
+                <a href="/">Contátenos</a>
               </nav>
             </section>
-
             <SocialButton />
           </Grid>
         </Toolbar>

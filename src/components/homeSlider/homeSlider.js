@@ -1,9 +1,14 @@
 
 import React from "react";
 import Slider from "react-slick";
-import image1 from "../../assets/imgs/bg2.jpg";
+// import image1 from "../../assets/imgs/bg2.jpg";
 import image2 from "../../assets/imgs/bg3.jpg";
 import image3 from "../../assets/imgs/bg7.jpg";
+import image1 from "../../assets/slider/7.jpg";
+// import image2 from "../../assets/slider/2.jpg";
+// import image3 from "../../assets/slider/3.jpg";
+// import image4 from "../../assets/slider/4.jpg";
+// import image5 from "../../assets/slider/5.jpg";
 import "../../assets/css/reactSlick.css";
 
 export const HomeSlider = props => {

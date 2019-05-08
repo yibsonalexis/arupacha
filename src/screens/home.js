@@ -1,5 +1,5 @@
 import React from "react";
-import { HomeSection } from "../components/homeSection/homeSection";
+// import { HomeSection } from "../components/homeSection/homeSection";
 import { HomeSlider } from "../components/homeSlider/homeSlider";
 import { HomeServices } from "../components/homeServices/homeServices";
 import { HomeSection2 } from "../components/homeSection2/homeSection2";
